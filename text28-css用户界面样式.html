@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>css用户界面样式</title>
+</head>
+<style>
+    input,
+    textarea {
+        outline: none;
+    }
+
+    textarea {
+        resize: none;
+    }
+
+    div {
+        width: 150px;
+        height: 80px;
+        background-color: brown;
+        margin: 100px auto;
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+    }
+</style>
+
+<body>
+    <h4>轮廓线: outline</h4>
+    <p>input{outline:none;}</p>
+    <input type="text">
+    <h4>防止拖拽文本域:resize</h4>
+    <textarea name="a1" id="" cols="30" rows="10"></textarea>
+    <p>textarea {resize:none;}</p>
+    <h4>vertical-align属性应用</h4>
+    <p>图片、表单和文字对齐</p>
+    <p>图片、表单都属于行内块元素，默认的vertical-align是基线对齐</p>
+    让文字和图片垂直居中：vertical-align:middle;
+    <h4>解决图片底部默认空白缝隙的问题：</h4>
+    <p>解决方法：1.给图片添加vertical-align:middle|top|bottom等</p>
+    <p>2.转换为块级元素display:block;</p>
+    <h4>溢出文字省略号显示</h4>
+    <h5>单行文本溢出显示省略号</h5>
+    <p>条件：（1）先强制一行显示文本 white-space:nowarp;(默认normal自动换行)</p>
+    <p>2.超出部分隐藏 overflow:hidden;</p>
+    <p> 3.文字用省略号替换超出的部分。 text-overflow:ellipsis</p>
+    <div>
+        这里面我也知道该说些啥，就随便说说。。
+    </div>
+    <h5>多行文本溢出显示省略号（了解）</h5>
+    <p>overflow:hidden;</p>
+    <p>text-overfolw:ellipsis;</p>
+    <p>弹性伸缩盒子模型显示：display:webkit-box;</p>
+    <p>限制在一个块元素显示的文本行数：-webkit-line-clamp:2;</p>
+    <p>设置或检索伸缩盒子对象的子元素的排列方式：-webkit-box-orient:vertical;</p>
+</body>
+
+</html>

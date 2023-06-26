@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HTML5新特性</title>
+</head>
+<style>
+    header,
+    nav,
+    article,
+    section,
+    aside,
+    footer {
+        font-size: 12px;
+        text-align: center;
+        line-height: 20px;
+        height: 20px;
+        background-color: aqua;
+        border-radius: 15px;
+        width: 800px;
+        margin: 15px auto;
+    }
+
+    video {
+        width: 100%;
+        height: auto;
+    }
+
+    input {
+        outline: none;
+    }
+
+    input::placeholder {
+        color: red;
+
+    }
+</style>
+
+<body>
+    <h3>HTML5新增语义化标签</h3>
+    <header>头部标签</header>
+    <nav>导航栏标签</nav>
+    <article>内容标签</article>
+    <section>定义文档某个区域</section>
+    <aside>侧边栏标签
+    </aside>
+    <footer>尾部标签</footer>
+    <h3>新增的多媒体标签</h3>
+    <p>1.音频标签</p>
+    <ul>
+        <li>属性 值 描述</li>
+        <li>autoplay autoplay 视频就绪自动播放</li>
+        <li>controls controls 向用户显示播放控件</li>
+        <li>loop loop 是否循环播放</li>
+        <li>src url 视频url地址</li>
+    </ul>
+    <p>2.视频标签:</p>
+    <p>视频video -常见属性:</p>
+    <ul>
+        <li>属性 值 描述</li>
+        <li>autoplay autoplay 视频就绪自动播放</li>
+        <li>controls controls 向用户显示播放控件</li>
+        <li>width pixels 设置播放器宽度</li>
+        <li>height pixels 设置播放器高度</li>
+        <li>loop loop 是否循环播放</li>
+        <li>preload auto(预先加载视频) none(不应加载图片) ...</li>
+        <li>src url 视频url地址</li>
+        <li>poster imgurl 加载等待的画面图片</li>
+        <li>muted muted 静音播放</li>
+        <li>注：谷歌浏览器需要添加muted来解决自动播放的问题S</li>
+    </ul>
+    <video src="./xuecheng.html/images/3e78e80.mp4" autoplay="autoplay" muted="muted" controls="controls"
+        loop="loop"></video></p>
+    <h3>新增的input 类型</h3>
+    <p>type="email" 限制用户输入必须为Email</p>
+    <p>type="url" 限制用户输入必须为url</p>
+    <p>type="date" 限制用户输入必须为date</p>
+    <p>type="time" 限制用户输入必须为time</p>
+    <p>type="month" 限制用户输入必须为month</p>
+    <p>type="number" 限制用户输入必须为number</p>
+    <p>type="tel" 限制用户输入必须为tel</p>
+    <p>type="search" 限制用户输入必须为搜索框</p>
+    <p>type="color" 生成一个颜色表单</p>
+    <h3>新增的表单属性</h3>
+    <ul>
+        <li>属性 值 说明</li>
+        <li>required required 表单内容不能为空,必填</li>
+        <li>placeholder 提示文本 表单的提示信息，存在默认值不显示</li>
+        <li>autofocus autofocus 自动聚焦属性，页面加载完毕自动聚焦到指定表单</li>
+        <li> autocomplete off/on 默认on</li>
+        <li>multiple multiple 可以多选文件提示</li>
+    </ul>
+    <form action="">
+        <input type="search" name="sear" id="" required="required" placeholder="我是提示字" autofocus="autofocus"
+            autocomplete="off">
+        <input type="submit" value="提交">
+    </form>
+
+</body>
+
+</html>

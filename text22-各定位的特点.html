@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>定位</title>
+</head>
+<style>
+    .box1 {
+        position: relative;
+        top: 10px;
+        left: 10px;
+        width: 100px;
+        height: 100px;
+        background-color: bisque;
+    }
+
+    .box2 {
+        width: 100px;
+        height: 100px;
+        background-color: blue;
+    }
+
+    .box3 {
+        position: absolute;
+        height: 100px;
+        width: 100px;
+        background-color: blue;
+        /* margin: auto; */
+        left: 50%;
+        /* top: 50%; */
+        margin-left: -50px;
+    }
+
+    .father {
+        position: absolute;
+        width: 700px;
+        height: 500px;
+        background-color: brown;
+    }
+
+    .son2 {
+        position: absolute;
+        right: 0;
+        bottom: 0;
+        width: 100px;
+        height: 120px;
+        color: blue;
+        background-color: black;
+    }
+
+    .son {
+        position: absolute;
+        right: 0;
+        bottom: 0;
+        width: 200px;
+        height: 200px;
+        color: blue;
+        background-color: aquamarine;
+    }
+
+    .dj img {
+        position: fixed;
+        top: 50%;
+        margin-top: -50px;
+        right: 40px;
+        width: 100px;
+        height: 100px;
+    }
+
+    .nav {
+        position: sticky;
+        top: 5px;
+        width: 800px;
+        height: 50px;
+        background-color: black;
+        margin: 10px auto;
+    }
+
+    .sp {
+        display: none;
+        position: absolute;
+        width: 100px;
+        height: 100px;
+        background-color: aquamarine;
+    }
+</style>
+
+<body>
+    静态定位 static <br>
+    相对定位 relative (不脱标)<br>
+    绝对定位 absolute <br>
+    固定定位 fixed <br>
+    <p>
+        相对定位：
+        1.相对于原来的位置来移动的
+        2.原来在标准流的位置继续占有，后面的盒子仍以标准流的方式对待它。
+    <h5>（不脱标，继续保留原来的位置），最典型的应用是给绝对定位当爹。</h5>
+    </p>
+    <br>
+    <p>
+        绝对定位：
+        1.如果没有父元素（祖先元素）或祖先元素没有定位，则以浏览器为准定位。
+        2.如果祖先元素有定位（相对、绝对、固定定位），则以最近一级的有定位祖先元素为参考点移动位置。
+        3.绝对定位不再占有原先的位置（脱标）。
+    </p>
+    <br>
+    <h3>子绝父相</h3>
+    <p>
+        1.绝对定位和相对定位的使用场景？子绝父相<br>
+        (1)子级绝对定位，不会占有位置，可以放到父盒子的任何一个地方，不会影响其他的兄弟盒子。<br>
+        (2)父盒子需要加定位限制子盒子在父盒子内显示。<br>
+        (3)父盒子布局时，需要占有位置，因此父盒子只能是相对定位。
+    </p>
+    <p>
+        2.相对定位给绝对定位当爹。
+    </p>
+    <h4>总结：父级盒子需要占有位置，因此是相对定位，子盒子不需要占有位置，则是绝对定位。</h4><br>
+    <p>固定定位</p>
+    <p>1.以浏览器的可视窗口为参照点移动元素，跟父元素没有任何关系，不随滚动条滚动</p>
+    2.固定定位不占有原先的位置。
+    <p>固定定位的小技巧：固定在版心右侧位置。</p>
+    <p>1.让固定定位的盒子left:50%,走到浏览器可视区的一半位置</p>
+    <p>2.让固定定位的盒子margin-left:版心宽度的一半距离。</p>
+    <p>粘性定位</p>
+    <p>1.以浏览器的可视化窗口为参照点移动元素（固定定位的特点）</p>
+    <p>2.粘性定位占有原来的位置（相对定位的特点）</p>
+    <p>3.必须加top、left、right、bottom其中一个才有效</p>
+    <div class="dj">
+        <img src="./images/1.jpg" alt="">
+        <p>固定定位</p>
+
+        <div class="nav">导航栏</div>
+        <p>定位叠放次序 z-indix</p>
+        <p>数值可以是正整数、负整数或0，默认是auto,数值越大，盒子越靠上</p>
+        <p>如果属性值相同，则按照书写顺序，后来居上</p>
+        <p>数字后面不能加单位</p><br>
+        <p>绝对定位居中</p>
+        <p>加了绝对定位的盒子不能通过marggin:() auto 水平居中</p>
+        <p>1.行内元素添加绝对或固定元素，可以直接设置高度和宽度</p>
+        <p>2.块级元素添加绝对或固定元素，如果不给高度或宽度，默认大小是内容的大小。</p>
+        <h4>绝对定位（固定定位）会完全压住盒子，但不会压住标准流盒子里面的文字（图片）</h4>
+        <h4>但绝对定位（固定定位）会压住下面标准流所有的内容。</h4>
+        <h4>浮动之所以不会压制文字，因为浮动产生的目的最初是为了做文字环绕效果的，文字会围绕浮动元素</h4>
+        <div class="box3"></div>
+        <span class="sp">123</span>
+
+        <div>111</div>
+        <div>111</div>
+        <div>111</div>
+        <h3>1.标注流</h3>
+        <p>可以让盒子上下排列或者左右排列，垂直的块级盒子显示就用标准流布局。</p>
+        <h3>2.浮动</h3>
+        <p>可以让多个块级元素一行显示或者左右对齐盒子，多个块级盒子水平显示就用浮动布局。</p>
+        <h3>3.定位</h3>
+        <p>定位最大的特点是有层叠的概念，就是可以让多个盒子前后叠压来显示，如果元素在某个盒子内移动就用定位布局。</p>
+        <h4>元素的显示与隐藏</h4>
+        <p>display:none; 隐藏对象</p>
+        <p>display:block;除了转换为块级元素外，同时还显示元素的意思</p>
+        <p>display隐藏元素后，不再占有原来的位置</p>
+        <h4>visibility可见性</h4>
+        <p>visibility:vasible; 元素可视</p>
+        <p>visibility:hidden; 元素隐藏</p>
+        <h5>Visibility 隐藏元素后，继续占有原来的位置.</h5>
+        <h4>overflow溢出</h4>
+        <p>如果有定位的盒子，慎用overflow:hidden,因为它会隐藏多余的部分。</p>
+
+</body>
+
+</html>

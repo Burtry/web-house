@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS组合器</title>
+    <style>
+        body {
+            background-color: #666;
+        }
+
+        div>p {
+            color: red;
+            background-color: black;
+        }
+
+        a {
+            display: block;
+            width: 400px;
+            height: 50px;
+            background-color: aqua;
+            line-height: 50px;
+            text-align: center;
+            text-decoration: none;
+            color: #fff;
+        }
+
+        a:link {
+            color: bisque;
+        }
+
+        a:visited {
+            color: orange;
+        }
+
+        a:hover {
+            background-color: antiquewhite;
+            color: black;
+        }
+    </style>
+
+</head>
+
+<body>
+    <!-- 后代选择器 -->
+    <div>
+        aaaa
+        <p>bbbb
+
+        <p>ffffffff</p>
+        </p>
+        <p>ddddddd</p>
+        <span>eeeee</span>
+
+    </div>
+    <a href="http://www.baidu.com/" target="_blank">啊啊啊啊</a>
+
+    <a class="wl1" href="http://www.baidu.com/" target="_blank">刷新一下</a>
+
+    <a class="cl2" href="http://www.baidu.com/" target="_blank">绷不住了</a>
+
+</body>
+
+</html>

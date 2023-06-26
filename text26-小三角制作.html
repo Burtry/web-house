@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    .box1 {
+        width: 0;
+        height: 0;
+        border: 40px solid transparent;
+        border-top-color: black;
+    }
+
+    .box2 {
+        margin-left: 50px;
+        position: relative;
+        width: 400px;
+        height: 200px;
+        background-color: blue;
+    }
+
+    .box2 span {
+        position: absolute;
+        top: 60px;
+        right: -80px;
+        width: 0;
+        height: 0;
+        line-height: 0;
+        font-size: 0;
+        border: 40px solid transparent;
+        border-left-color: blue;
+    }
+</style>
+
+<body>
+    <div class="box1"></div>
+    <div class="box2">
+        <span></span>
+    </div>
+</body>
+
+</html>

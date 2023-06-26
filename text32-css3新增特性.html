@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS3的新特性</title>
+</head>
+<style>
+    /* input[value] {
+        color: red;
+    } */
+    input[type=text] {
+        color: red;
+    }
+
+    div[class^=icon] {
+        color: red;
+    }
+
+    div[class$=rd] {
+        color: blue;
+    }
+
+    img {
+        width: 100%;
+        height: 500px;
+    }
+
+    /* ul li:first-child {
+        background-color: red;
+    } */
+
+    ul li:nth-child(2n) {
+        background-color: blue
+    }
+
+    ul li:nth-child(2n+1) {
+        background-color: red;
+    }
+
+    /* ul li:last-child {
+        background-color: red;
+    } */
+    ol section div:nth-child(2) {
+        background-color: red;
+    }
+
+    ol section div:nth-of-type(3) {
+        background-color: red;
+    }
+
+    .box1 {
+        width: 200px;
+        height: 200px;
+        background-color: aqua;
+    }
+
+    .box1::before {
+        content: '22222';
+    }
+
+    .box1::after {
+        content: '333333';
+    }
+</style>
+
+<body>
+    <h3>新增选择器：</h3>
+    <h5>1.属性选择器:利用属性选择器可以不用借助于类或id选择器</h5>
+    <p>语法：属性选择器标签名[特有元素]</p>
+    <input type="text" placeholder="输入">
+    <input type="text" value="请输入：">
+    <h5>2.属性选择器还可以选择属性=值的某些元素</h5>
+    <input type="text" value="请输入：">
+    <input type="password" value="请输入：">
+    <h5>3.属性选择器可以选择属性值开头的某些元素</h5>
+    <div class="icon1">123</div>
+    <div class="icon2">132</div>
+    <div class="icon3">123</div>
+    <div class="icon4">123</div>
+    <div class="icon5">123</div>
+    <h5>4.属性选择器可以选择属性值结尾的元素</h5>
+    <div class="icon1_rd">123</div>
+    <div class="icon2_rd">132</div>
+    <div class="icon3_rd">123</div>
+    <img src="./images/Snipaste_2023-06-24_14-07-10.png" alt="">
+    <h3>结构伪类选择器</h3>
+    <p>nth-child(n)选择某个父元素的一个或多个特定的子元素</p>
+    <p>n可以是数字，关键字和公式</p>
+    <p>关键字：even 偶数 ，odd 基数</p>
+    <ul>
+        <li>我是第1个孩子</li>
+        <li>我是第2个孩子</li>
+        <li>我是第3个孩子</li>
+        <li>我是第4个孩子</li>
+        <li>我是第5个孩子</li>
+        <li>我是第6个孩子</li>
+        <li>我是第7个孩子</li>
+        <li>我是第8个孩子</li>
+    </ul>
+    <ol>
+        <section>
+            <div>222</div>
+            <p>111</p>
+            <div>123</div>
+            <div>456
+
+            </div>
+        </section>
+    </ol>
+    <h4 style="color: red;">注意区别：</h4>
+    <p>nht-child 会把所有的盒子都排列序号,执行的时候首先看:nht-child(n)之后回去看前面的div</p>
+    <p>nht-of-type 会把指定元素的盒子排列序号，执行的时候首先看div指定的元素 ，之后回去看:nht-of-type(n)第几个孩子</p>
+    <img src="/images/Snipaste_2023-06-24_14-11-10.png" alt="">
+    <h4>伪元素选择器：</h4>
+    <p>::before 在元素内部的前面插入内容
+    </p>
+    <p>::after 在元素内部的后面插入内容</p>
+    <p>这俩必须有content属性</p>
+    <p>属于行内元素</p>
+    <p>伪元素在文档中找不到,伪元素和标签选择器一样，权重为1</p>
+    <div class="box1">
+        11111
+    </div>
+</body>
+
+</html>
